@@ -1,0 +1,12 @@
+<h1>All the 🕍 Jewish 🕍 🐈 Katz 🐈</h1>
+
+<h3> <a href="<%= new_cat_url%>">Donate a little fuzzy</a> </h3>
+
+<% @cats.each_with_index do |cat, index| %>
+
+<h<%= index % 6 %> >
+    <a href="<%= cat_url(cat)%>" > <%= cat.name %> </a>
+</h<%= index % 6 %>>
+
+<% end %>
+

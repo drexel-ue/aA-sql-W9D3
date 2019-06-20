@@ -1,0 +1,47 @@
+<h1> Make a new Cat! </h1>
+
+<ul>
+    <% @cat.errors.full_messages.each do |error| %>
+       <li><%=error%><li>
+    <% end %>
+</ul>
+
+<form action="<%= cats_url %>" method="POST">
+
+    <%#input type="hidden_method"%>
+
+    <label for="name">Name:
+        <input id= "name" type="text" name="cat[name]" value="<%=@cat[name]%>"/>
+    </label>
+
+    <label for="sex" >Sex:
+        <select id="sex" name="cat[sex]" value="<%=@cat[sex]%>">
+            <option value="M">♂</option>
+            <option value="F">♀</option>
+            <option value="A">⚧</option>
+        </select>
+    </label>
+
+    <label for="color" >Color:
+        <select id="color" name="cat[color]" value="<%=@cat[color]%>">
+            <option value="Green">Green</option>
+            <option value="Teal">Teal</option>
+            <option value="Purple">Purple</option>
+        </select>
+    </label>
+    
+    <label for ="Birthdate" > Birthdate:
+        <input id="Birthdate" type="date" name="cat[birth_date]" value="<%=@cat[birth_date]%>" >
+    </label>
+    <label for="description">Description:
+        <input id= "description" type="text" name="cat[description]" value="<%=@cat[description]%>"/>
+    </label>
+    
+    <button>Dontate</button>
+    
+
+
+        <%# <input id= "sex" type="radio" name="sex" > %>
+        <%#value ="<%= @cat.name%>
+    
+</form>
